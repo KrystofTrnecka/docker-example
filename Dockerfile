@@ -7,7 +7,7 @@ COPY . .
 RUN npm install
 
 # Expose the port Nginx is serving on
-EXPOSE 80
+EXPOSE 3000
 
 # Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD [ "node", "server.js" ]
